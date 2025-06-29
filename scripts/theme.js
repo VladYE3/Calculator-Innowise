@@ -20,3 +20,4 @@ export function initThemeManager() {
   });
 }
 console.log('ESLint test');
+console.log('ESLint test 2');
