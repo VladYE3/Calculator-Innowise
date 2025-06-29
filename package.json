@@ -22,12 +22,10 @@
   },
   "lint-staged": {
     "*.js": [
-      "eslint --fix",
-      "git add"
+      "eslint --max-warnings=0 --fix"
     ],
     "*.{css,html}": [
-      "prettier --write",
-      "git add"
+      "prettier --write"
     ]
   }
 }

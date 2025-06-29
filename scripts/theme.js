@@ -19,5 +19,3 @@ export function initThemeManager() {
     updateThemeButton(next);
   });
 }
-console.log('ESLint test');
-console.log('ESLint test 2');
