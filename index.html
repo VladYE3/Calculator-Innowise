@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Calculator Innowise</title>
+    <link
+      rel="icon"
+      href="https://boxbot6.github.io/calculator-icon-windows-v1/images/calculator-icon-windows-v1-example-1.png"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="theme-toggle-container">
+      <button id="theme-toggle" aria-label="Change theme"></button>
+    </div>
+
+    <div class="calculator">
+      <div class="display" id="display">0</div>
+      <div class="buttons">
+        <button data-action="clear" class="btn-light">AC</button>
+        <button data-action="negate" class="btn-light">+/-</button>
+        <button data-action="percent" class="btn-light">%</button>
+        <button data-action="divide" class="btn-op">÷</button>
+
+        <button class="btn-num">7</button>
+        <button class="btn-num">8</button>
+        <button class="btn-num">9</button>
+        <button data-action="multiply" class="btn-op">×</button>
+
+        <button class="btn-num">4</button>
+        <button class="btn-num">5</button>
+        <button class="btn-num">6</button>
+        <button data-action="subtract" class="btn-op">−</button>
+
+        <button class="btn-num">1</button>
+        <button class="btn-num">2</button>
+        <button class="btn-num">3</button>
+        <button data-action="add" class="btn-op">+</button>
+
+        <button class="btn-num zero">0</button>
+        <button data-action="decimal" class="btn-num">.</button>
+        <button data-action="equals" class="btn-op">=</button>
+      </div>
+    </div>
+
+    <script type="module" src="scripts/index.js"></script>
+  </body>
+</html>

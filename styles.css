@@ -1,0 +1,127 @@
+:root {
+  --bg: #202020;
+  --calc-bg: #333;
+  --display-bg: #000;
+  --text-main: #fff;
+  --btn-light-bg: #a5a5a5;
+  --btn-op-bg: #fe9505;
+  --btn-num-bg: #505050;
+  --btn-text-light: #000;
+  --btn-text-op: #fff;
+  --btn-text-num: #fff;
+}
+:root[data-theme='light'] {
+  --bg: #f5f5f5;
+  --calc-bg: #e0e0e0;
+  --display-bg: #fff;
+  --text-main: #000;
+  --btn-light-bg: #fff;
+  --btn-op-bg: #0077cc;
+  --btn-num-bg: #ccc;
+  --btn-text-light: #000;
+  --btn-text-op: #fff;
+  --btn-text-num: #000;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: var(--bg);
+  color: var(--text-main);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  font-family: sans-serif;
+}
+
+.theme-toggle-container {
+  margin-bottom: 12px;
+}
+
+#theme-toggle {
+  font-size: 1rem;
+  background: none;
+  border: 2px solid var(--text-main);
+  color: var(--text-main);
+  border-radius: 8px;
+  padding: 6px 12px;
+  cursor: pointer;
+}
+#theme-toggle:active {
+  opacity: 0.7;
+}
+
+.calculator {
+  background: var(--calc-bg);
+  border-radius: 16px;
+  padding: 16px;
+  width: 320px;
+}
+
+.display {
+  background: var(--display-bg);
+  color: var(--text-main);
+  font-size: 2.5rem;
+  text-align: right;
+  padding: 16px;
+  border-radius: 8px;
+  margin-bottom: 16px;
+  overflow-x: auto;
+}
+
+.buttons {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-auto-rows: 64px;
+  gap: 12px;
+}
+
+button {
+  font-size: 1.4rem;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+button:active {
+  opacity: 0.75;
+}
+
+.btn-light {
+  background: var(--btn-light-bg);
+  color: var(--btn-text-light);
+}
+
+.btn-op {
+  background: var(--btn-op-bg);
+  color: var(--btn-text-op);
+}
+
+.btn-num {
+  background: var(--btn-num-bg);
+  color: var(--btn-text-num);
+}
+
+.zero {
+  grid-column: 1/3;
+  grid-row: 5;
+  border-radius: 32px;
+  text-align: center;
+  justify-self: stretch;
+}
+
+button[data-action='decimal'] {
+  grid-column: 3;
+  grid-row: 5;
+}
+
+button[data-action='equals'] {
+  grid-column: 4;
+  grid-row: 5;
+}
