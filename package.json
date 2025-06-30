@@ -1,31 +1,45 @@
 {
   "name": "calculator-innowise",
   "version": "1.0.0",
-  "description": "Калькулятор с переключением темы и линтингом через Husky + lint-staged",
+  "description": "Calculator Innowise with changing theme",
   "type": "module",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/VladYE3/Calculator-Innowise.git"
+  },
+  "homepage": "https://vladye3.github.io/calculator-innowise",
   "scripts": {
     "prepare": "husky install .husky",
     "lint": "eslint \"**/*.js\"",
-    "format": "prettier --write \"**/*.{js,css,html}\""
+    "format": "prettier --write \"**/*.{js,css,html}\"",
+    "build": "webpack --config webpack.config.cjs",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d dist"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
     "@eslint/eslintrc": "^3.3.1",
+    "clean-webpack-plugin": "^4.0.0",
+    "css-loader": "^7.1.2",
     "eslint": "^8.57.1",
     "eslint-config-prettier": "^10.1.5",
     "eslint-plugin-prettier": "^5.5.1",
+    "gh-pages": "^6.3.0",
+    "html-webpack-plugin": "^5.6.3",
     "husky": "^9.1.7",
     "lint-staged": "^16.1.2",
-    "prettier": "^3.6.2"
+    "prettier": "^3.6.2",
+    "style-loader": "^4.0.0",
+    "terser-webpack-plugin": "^5.3.14",
+    "webpack": "^5.99.9",
+    "webpack-cli": "^6.0.1"
   },
   "lint-staged": {
-    "*.js": [
-      "eslint --max-warnings=0 --fix"
-    ],
-    "*.{css,html}": [
-      "prettier --write"
+    "scripts/**/*.js": [
+      "eslint --fix",
+      "git add"
     ]
   }
 }
