@@ -7,7 +7,7 @@
     "type": "git",
     "url": "https://github.com/VladYE3/Calculator-Innowise.git"
   },
-  "homepage": "https://vladye3.github.io/calculator-innowise",
+  "homepage": "https://vladye3.github.io/Calculator-Innowise",
   "scripts": {
     "prepare": "husky install .husky",
     "lint": "eslint \"**/*.js\"",
